@@ -22,13 +22,13 @@ logger:
   log_level: 'debug'
   log_path: '.'
 
-mysql:
-  mysql_driver_name: 'postgres'
-  mysql_max_open_conns: 100
-  mysql_max_idle_conns: 100
-  mysql_max_lifetime_conns: 5 
-  mysql_lifetime_conns_unit: ''
-  mysql_url: 'root:root@tcp(127.0.0.1:3306)/cat-social?parseTime=true?sslmode=disabled'
+pgsql:
+  pgsql_driver_name: 'postgres'
+  pgsql_max_open_conns: 100
+  pgsql_max_idle_conns: 100
+  pgsql_max_lifetime_conns: 5 
+  pgsql_lifetime_conns_unit: ''
+  pgsql_url: 'root:root@tcp(127.0.0.1:3306)/cat-social?parseTime=true?sslmode=disabled'
 
 cipher:
-  cipher_mysql: 'test123'
+  cipher_pgsql: 'test123'

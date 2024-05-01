@@ -12,7 +12,7 @@ type (
 		App        `yaml:"app"`
 		HTTPServer `yaml:"httpserver"`
 		HTTPClient `yaml:"httpclient"`
-		MYSQL      `yaml:"mysql"`
+		PGSQL      `yaml:"pgsql"`
 		Log        `yaml:"logger"`
 		Cipher     `yaml:"cipher"`
 	}
@@ -49,18 +49,18 @@ type (
 		Path  string `yaml:"log_path"`
 	}
 
-	// MYSQL struct -.
-	MYSQL struct {
-		MysqlDriverName   string `env-required:"true" yaml:"mysql_driver_name"`
-		MaxOpenConns      int    `env-required:"true" yaml:"mysql_max_open_conns"`
-		MaxIdleConns      int    `env-required:"true" yaml:"mysql_max_idle_conns"`
-		MaxLifetimeConns  int    `env-required:"true" yaml:"mysql_max_lifetime_conns"`
-		LifetimeConnsUnit string `yaml:"mysql_lifetime_conns_unit"`
-		URL               string `env-required:"true" yaml:"mysql_url" env:"MYSQL_URL"`
+	// PGSQL struct -.
+	PGSQL struct {
+		PgsqlDriverName   string `env-required:"true" yaml:"pgsql_driver_name"`
+		MaxOpenConns      int    `env-required:"true" yaml:"pgsql_max_open_conns"`
+		MaxIdleConns      int    `env-required:"true" yaml:"pgsql_max_idle_conns"`
+		MaxLifetimeConns  int    `env-required:"true" yaml:"pgsql_max_lifetime_conns"`
+		LifetimeConnsUnit string `yaml:"pgsql_lifetime_conns_unit"`
+		URL               string `env-required:"true" yaml:"pgsql_url" env:"PGSQL_URL"`
 	}
 
 	Cipher struct {
-		CipherMysql string `env-required:"true" yaml:"cipher_mysql"`
+		CipherPgsql string `env-required:"true" yaml:"cipher_pgsql"`
 	}
 )
 
